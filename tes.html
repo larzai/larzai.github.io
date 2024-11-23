@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Navigation</title>
+  <style>
+    .container {
+      display: none;
+    }
+
+    .container.active {
+      display: block;
+    }
+
+    .container-button button.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .container-button button {
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border: none;
+      background-color: #f1f1f1;
+    }
+
+    .container-button button:check {
+      background-color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-button">
+  <button class="active" onclick="showContainerSkill('container-1')">Tech Stack</button>
+  <button onclick="showContainerSkill('container-2')">Tools</button>
+  <button onclick="showContainerSkill('container-3')">Design</button>
+</div>
+
+<div id="container-1" class="container active">
+  Hello World
+</div>
+<div id="container-2" class="container">
+  Content for Tools
+</div>
+<div id="container-3" class="container">
+  Content for Design
+</div>
+
+<script>
+  function showContainerSkill(containerId) {
+    // Menyembunyikan semua kontainer
+    var containers = document.querySelectorAll('.container');
+    containers.forEach(function(container) {
+      container.classList.remove('active');
+    });
+
+    // Menampilkan kontainer yang sesuai
+    var activeContainer = document.getElementById(containerId);
+    activeContainer.classList.add('active');
+
+    // Menonaktifkan tombol yang aktif
+    var buttons = document.querySelectorAll('.container-button button');
+    buttons.forEach(function(button) {
+      button.classList.remove('active');
+    });
+
+    // Menambahkan kelas active ke tombol yang dipilih
+    var activeButton = Array.from(buttons).find(function(button) {
+      return button.textContent.toLowerCase() === containerId.replace('container-', '').replace('-', ' ');
+    });
+    activeButton.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

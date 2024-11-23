@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Larzai Portocfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=PT+Sans+Caption:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+<!--   <div id="intro"> 
+      <h1>portofolio</h1>
+      <p>Rifaldo Saputra</p>
+    </div>
+  </div> -->
+  <main>
+    <section class="section1" id="home">
+      <h1 data-aos="fade-right" data-aos-offset="500" data-aos-delay="50" data-aos-duration="1100" data-aos-easing="ease-in-out">Hello World! Saya</h1>
+      <h2 data-aos="fade-right" data-aos-offset="500" data-aos-delay="50" data-aos-duration="1400" data-aos-easing="ease-in-out">Rifaldo Saputra</h2>
+      <h3 data-aos="fade-right" data-aos-offset="500" data-aos-delay="50" data-aos-duration="1800" data-aos-easing="ease-in-out">I am <span id="textTyping"> </span><span id="cursor">|</span></h3>
+      <p data-aos="fade-right" data-aos-offset="500" data-aos-delay="50" data-aos-duration="2200" data-aos-easing="ease-in-out">Ini adalah web Portofolio saya yang berisi dengan hall seperti tentang saya, skill, project, dan lain-lain.</p>
+      <img data-aos="fade-right" data-aos-offset="500" data-aos-delay="50" data-aos-duration="2600" data-aos-easing="ease-in-out" src="./file/img1.png" alt="Images" />
+      <a data-aos="fade-right" data-aos-offset="500" data-aos-delay="50" data-aos-duration="2500" data-aos-easing="ease-in-out" href="https://wa.me/6285768019887">Chat Me</a>
+    </section>
+    <div class="svg-wave" id="about">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#8d8fed" fill-opacity="1" d="M1,224C160,192,320,128,480,122.7C640,117,800,171,960,192C1120,213,1280,203,1360,197.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+      </svg>
+    </div>
+    <section class="section2">
+      <h1 data-aos="fade-up" data-aos-duration="1500">About</h1>
+      <article data-aos="fade-up" data-aos-duration="1500">
+        <h1>About Me</h1>
+        <p>Perkenalkan saya Rifaldo Saputra, saya adalah siswa SMP dan saya seorang pengembang perangkat lunak yang berfokus pada pengalaman pengguna dan solusi yang efektif. Dengan latar belakang dalam Frontend dan Backend, saya menggabungkan estetika desain dengan kekuatan teknologi untuk menciptakan aplikasi yang bukan hanya fungsional, tetapi juga menarik dan intuitif. Setiap proyek bagi saya adalah kesempatan untuk berinovasi dan mengh adirkan hasil yang memenuhi kebutuhan klien sekaligus berdampak positif bagi pengguna. Saya selalu bersemangat mengeksplorasi teknologi terbaru dan berkomitmen untuk terus berkembang dalam bidang ini.</p>
+      </article>
+      <h1 data-aos="fade-up" data-aos-duration="1500">Skill</h1>
+      <div data-aos="fade-up" data-aos-duration="1500" id="skill">
+        <div class="container-button">
+          <button id="btn-1" class="active" onclick="showContainerSkill('container-1', this)">Tech Stack</button>
+          <button id="btn-2" onclick="showContainerSkill('container-2', this)">Tools</button>
+          <button id="btn-3" onclick="showContainerSkill('container-3', this)">Design</button>
+        </div>
+        <div id="container-1" class="container active">
+          <figure>
+            <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png" alt="Images"/>
+            <h1>HTML</h1>
+            <range style="width: 99%;">99%</range>
+          </figure>
+          <figure>
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Images"/>
+            <h1>CSS</h1>
+            <range style="width: 95%;">95%</range>
+          </figure>
+          <figure>
+            <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/javascript_original_logo_icon_146455.png" alt="Images"/>
+            <h1>JavaScript</h1>
+            <range style="width: 70%;">70%</range>
+          </figure>
+          <figure>
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-node-js-1174925.png" alt="Images"/>
+            <h1>NodeJS</h1>
+            <range style="width: 55%;">55%</range>
+          </figure>
+          <figure>
+            <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" alt="Images"/>
+            <h1>ReactJS</h1>
+            <range style="width: 40%;">40%</range>
+          </figure>
+          <figure>
+            <img src="https://i.imgur.com/GHS5aAD.png" alt="Images"/>
+            <h1>Arduino</h1>
+            <range style="width: 40%;">40%</range>
+          </figure>
+          <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/182px-Python-logo-notext.svg.png" alt="Images"/>
+            <h1>Python</h1>
+            <range style="width: 15%;">15%</range>
+          </figure>
+          <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Typescript.svg/96px-Typescript.svg.png" alt="Images"/>
+            <h1>TypeScript</h1>
+            <range style="width: 5%%;">5%</range>
+          </figure>
+          <figure>
+            <img src="https://i.imgur.com/6igkMWJ.png" alt="Images"/>
+            <h1>Tailwind</h1>
+            <range style="width: 93%;">93%</range>
+          </figure>
+          <figure>
+            <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo-shadow.png" alt="Images"/>
+            <h1>bootstrap</h1>
+            <range style="width: 90%;">90%</range>
+          </figure>
+        </div>
+        <div id="container-2" class="container">
+          <figure>
+            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Images"/>
+            <h1>Git</h1>
+            <range style="width: 100%;">100%</range>
+          </figure>
+          <figure>
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Images"/>
+            <h1>GitHub</h1>
+            <range style="width: 60%;">60%</range>
+          </figure>
+          <figure>
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-npm-3-1175132.png" alt="Images"/>
+            <h1>NPM</h1>
+            <range style="width: 100%;">100%</range>
+          </figure>
+        </div>
+        <div id="container-3" class="container">
+          <figure>
+            <img src="https://i.imgur.com/uVoOSrF.png" alt="Images"/>
+            <h1>Alight Motion</h1>
+            <range style="width: 95%;">95%</range>
+          </figure>
+          <figure>
+            <img src="https://seeklogo.com/images/P/picsart-icon-logo-EE8CEAAED8-seeklogo.com.png" alt="Images"/>
+            <h1>PicsArt</h1>
+            <range style="width: 80%;">80%</range>
+          </figure>
+          <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/id/3/36/CapCut_logo.png?20230828134515" alt="Images"/>
+            <h1>CapCut</h1>
+            <range style="width: 95%;">95%</range>
+          </figure>
+          <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg/768px-Adobe_Photoshop_Lightroom_CC_logo.svg.png" alt="Images"/>
+            <h1>LightRoom</h1>
+            <range style="width: 75%;">75%</range>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="section3" id="#project">
+      <h1 data-aos="fade-up" data-aos-duration="1500">My Project</h1>
+      <h2 data-aos="fade-up" data-aos-duration="1500">Website and Application</h2>
+      <div class="container-project-wandapp">
+        <figure data-aos="fade-up" data-aos-duration="1500">
+          <img src="https://i.imgur.com/nLUoB4i.png"/>
+          <div class="caption">
+            <h1>Portofolio</h1>
+            <p>Ini adalah personal website saya atau Portofolio</p>
+            <div class="about-project">
+              <div class="container-img">
+                <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png"/>
+                 <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png"/>
+                 <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/javascript_original_logo_icon_146455.png"/>
+              </div>
+              <a href="https://larzai.github.io"><i class="fi fi-rr-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </figure>
+        <figure data-aos="fade-up" data-aos-duration="1500">
+          <img src="https://i.imgur.com/eFXY2CA.jpeg"/>
+          <div class="caption">
+            <h1>Organization Website</h1>
+            <p>Website organisasi yang bersisi informasi, dan kontent lain-nya</p>
+            <div class="about-project">
+              <div class="container-img">
+                <img src="https://cdn-icons-png.flaticon.com/512/1051/1051277.png"/>
+                 <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png"/>
+                 <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/javascript_original_logo_icon_146455.png"/>
+              </div>
+              <a href="https://g90nf.kezt.my.id"><i class="fi fi-rr-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <h1 data-aos="fade-up" data-aos-duration="1500" style="margin-top: 50px;">My Project</h1>
+      <h2 data-aos="fade-up" data-aos-duration="1500">Design</h2>
+      <div class="container-project-design" data-aos="fade-up" data-aos-duration="1500">
+        <figure>
+          <img src="https://i.imgur.com/GQLstTf.png" alt="Image 1">
+          <h1>Image 1</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/9AGa5O7.jpeg" alt="Image 2">
+          <h1>Image 2</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/5HGZGtH.png" alt="Image 3">
+          <h1>Image 3</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/WFZRY7e.png" alt="Image 4">
+          <h1>Image 4</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/g5aCXaX.png" alt="Image 5">
+          <h1>Image 5</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/q4nvY0W.jpeg" alt="Image 6">
+          <h1>Image 6</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/QyaiyfH.png" alt="Image 7">
+          <h1>Image 7</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/vtPP5cL.png" alt="Image 8">
+          <h1>Image 8</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/t3EH3uN.png" alt="Image 9">
+          <h1>Image 9</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/VfrsM19.jpeg" alt="Image 10">
+          <h1>Image 10</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/2ARg04D.png" alt="Image 11">
+          <h1>Image 11</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/Rocone4.png" alt="Image 12">
+          <h1>Image 12</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/SpIIIOS.png" alt="Image 13">
+          <h1>Image 13</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/cRZ7E0C.png" alt="Image 14">
+          <h1>Image 14</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/15owXJ3.jpeg" alt="Image 15">
+          <h1>Image 15</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/MRVu9Kx.png" alt="Image 16">
+          <h1>Image 16</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/TP0AnDR.png" alt="Image 17">
+          <h1>Image 17</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/iVgwK2l.jpeg" alt="Image 18">
+          <h1>Image 18</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/NuABhG9.jpeg" alt="Image 19">
+          <h1>Image 19</h1>
+        </figure>
+        <figure>
+          <img src="https://i.imgur.com/8OMkmuu.png" alt="Image 20">
+          <h1>Image 20</h1>
+        </figure>
+      </div>
+    </section>
+    <section class="section4">
+      <h1 data-aos="fade-up" data-aos-duration="1500">Contact Me</h1>
+      <p data-aos="fade-up" data-aos-duration="1500">Kirim saya pesan lewat email atau hubungi saya langsung dengan klik logo sosial media di bawah!</p>
+      <div class="container-message" data-aos="fade-up" data-aos-duration="1500">
+        <input type="text" name="" id="" value="" placeholder="Nama"/>
+        <input type="email" name="" id="" value="" placeholder="Email"/>
+        <textarea name="" id= rows="8" cols="40" placeholder="Masukkan Pesan"></textarea>
+        <input onclick="sistem.message.log('Pesan terkirim');" type="button" name="" id="" value="Submit"/>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1500" class="sosial-media">
+        <a href="https://wa.me/6285768019887"><i class="fi fi-brands-whatsapp"></i></a>
+        <a href="https://www.instagram.com/call_me_doooo?igsh=MWk4Y3Z5MjRzMmMzMA=="><i class="fi fi-brands-instagram"></i></a>
+      </div>
+    </section>
+  </main>
+  <header>
+    <ul>
+      <h1>portofolio</h1>
+      <li>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+  </header>
+  <sidebar id="sidebar">
+    <div class="option-button">
+      <a id="navButtonClose"><i class="fi fi-rr-angle-left"></i></a>
+    </div>
+    <li>
+      <a href="#home"><i class="fi fi-rr-house-chimney"></i> Home</a>
+      <a href="#about"><i class="fi fi-rr-info"></i> About</a>
+      <a href="#project"><i class="fi fi-rr-blueprint"></i> Project</a>
+      <a href="#contact"><i class="fi fi-rr-phone-guide"></i> Contact</a>
+    </li>
+  </sidebar>
+  <nav>
+    <a id="navButtonOpen"><i class="fi fi-rr-bars-sort"></i></a>
+    <h1>portofolio</h1>
+  </nav>
+  
+  <script src="script.js"></script>
+  <script src="https://api.kezt.my.id/kesis-message-log.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
