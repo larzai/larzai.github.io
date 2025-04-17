@@ -1,79 +1,109 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tab Navigation</title>
-  <style>
-    .container {
-      display: none;
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrol LED IoT</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding-top: 50px;
+      }
+      button {
+        padding: 15px 30px;
+        margin: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .on {
+        background-color: #4CAF50;
+        color: white;
+      }
+      .off {
+        background-color: #f44336;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kontrol LED IoT</h1>
+    <button class="on" onclick="onLed()">ON</button>
+    <button class="off" onclick="offLed()">OFF</button>
+    <button onclick="mulaiRekam()">Mulai Rekam</button>
+    <p id="hasil"></p>
+    <p id="hasil2"></p>
+
+  <script>
+    const hasil = document.getElementById("hasil");
+    const hasil2 = document.getElementById("hasil2");
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  
+    if (SpeechRecognition) {
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'id-ID';
+      recognition.interimResults = false;
+      recognition.maxAlternatives = 1;
+  
+      let runMic = true;
+  
+      recognition.onresult = function(event) {
+        const teks = event.results[0][0].transcript;
+        const outputMic = teks.toLowerCase();
+        hasil.textContent = teks;
+        hasil2.textContent = teks;
+        
+        if (teks.includes("lini hidupkan lampu" && "Hidupkan lampu")) {
+          onLed();
+        } else if (teks.includes("lini matikan lampu" && "Matikan lampu")) {
+          offLed();
+        }
+      };
+      
+      recognition.onerror = function(event) {
+        hasil.textContent = 'Error: ' + event.error;
+        if (runMic) {
+          recognition.stop();  // pastikan berhenti dulu
+          setTimeout(() => recognition.start(), 500); // coba mulai ulang setelah jeda
+        }
+      };
+
+  
+      recognition.onstart = function() {
+        hasil.textContent = 'Mendengarkan...';
+      };
+  
+      recognition.onend = function() {
+        if (runMic) {
+          recognition.start(); // otomatis mulai lagi setelah selesai
+        }
+      };
+  
+      recognition.start(); // mulai pertama kali
+  
+      window.mulaiRekam = () => {
+        runMic = true;
+        recognition.start();
+      };
+  
+      window.berhentiRekam = () => {
+        runMic = false;
+        recognition.stop();
+      };
+    } else {
+      hasil.textContent = "Browser tidak mendukung Speech Recognition";
     }
-
-    .container.active {
-      display: block;
+  
+    const url = 'http://192.168.1.241';
+    function onLed() {
+      fetch(url + '/on');
     }
-
-    .container-button button.active {
-      background-color: #4CAF50;
-      color: white;
+  
+    function offLed() {
+      fetch(url + '/off');
     }
-
-    .container-button button {
-      padding: 10px 20px;
-      margin: 5px;
-      cursor: pointer;
-      border: none;
-      background-color: #f1f1f1;
-    }
-
-    .container-button button:check {
-      background-color: #4CAF50;
-    }
-  </style>
-</head>
-<body>
-
-<div class="container-button">
-  <button class="active" onclick="showContainerSkill('container-1')">Tech Stack</button>
-  <button onclick="showContainerSkill('container-2')">Tools</button>
-  <button onclick="showContainerSkill('container-3')">Design</button>
-</div>
-
-<div id="container-1" class="container active">
-  Hello World
-</div>
-<div id="container-2" class="container">
-  Content for Tools
-</div>
-<div id="container-3" class="container">
-  Content for Design
-</div>
-
-<script>
-  function showContainerSkill(containerId) {
-    // Menyembunyikan semua kontainer
-    var containers = document.querySelectorAll('.container');
-    containers.forEach(function(container) {
-      container.classList.remove('active');
-    });
-
-    // Menampilkan kontainer yang sesuai
-    var activeContainer = document.getElementById(containerId);
-    activeContainer.classList.add('active');
-
-    // Menonaktifkan tombol yang aktif
-    var buttons = document.querySelectorAll('.container-button button');
-    buttons.forEach(function(button) {
-      button.classList.remove('active');
-    });
-
-    // Menambahkan kelas active ke tombol yang dipilih
-    var activeButton = Array.from(buttons).find(function(button) {
-      return button.textContent.toLowerCase() === containerId.replace('container-', '').replace('-', ' ');
-    });
-    activeButton.classList.add('active');
-  }
-</script>
-
-</body>
+  </script>
+  </body>
 </html>
