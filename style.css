@@ -563,7 +563,7 @@ svg {
       #9478EE,
       #5756D5
     );
-    width: 100vw;
+    width: 0vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -701,7 +701,7 @@ svg {
       #9478EE,
       #5756D5
     );
-    width: 100vw;
+    width: 0vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
